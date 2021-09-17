@@ -1,0 +1,13 @@
+name: file check
+on: push
+
+jobs:
+  flie-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: test2
+        id: test2
+        run: echo 9
+      - name: echo exit status
+        if: failure()
+        run: echo "${{ failure() }}"
