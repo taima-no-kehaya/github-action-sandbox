@@ -9,5 +9,4 @@ jobs:
         id: test2
         run: echo 9
       - name: echo exit status
-        if: failure()
         run: echo "${{ failure() }}"
